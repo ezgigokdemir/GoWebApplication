@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Movie App</title>
+	</head>
+	<style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 50%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+
+		.addBtn {
+			background-color: #04AA6D;
+        	color: white;
+        	padding: 12px 20px;
+        	border: none;
+        	border-radius: 4px;
+        	cursor: pointer;
+			background-color: #45a049;
+			text-decoration: none;
+		}
+    </style>
+	<body>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Create Date</th>
+			</tr>
+		{{range .}}
+			<tr>
+				<td>{{.ID}}</td>
+				<td>{{.Name}}</td>
+				<td>{{.CreateDate}}</td>
+			</tr>
+		{{end}}
+		</table>
+		<p><a href="/add" class="addBtn">Add New Movie</a></p>
+	</body>
+</html>
